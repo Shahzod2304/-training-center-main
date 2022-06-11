@@ -1,6 +1,7 @@
 from http.client import HTTPResponse
+
 from django.shortcuts import render
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView,DetailView,ListView
 from .models import *
 from django.core.mail import send_mail
 # Create your views here.
@@ -15,9 +16,14 @@ class About(TemplateView):
 class Categories(TemplateView):
     template_name = 'categories.html'
     
-class Blog(TemplateView):
+class Blogs(ListView):
+    model = Blog
     template_name = 'blog.html'
-    
+
+class ArticleDetailView(DetailView):
+    model = Blog
+    template_name = 'post_detail.html'
+
 def contact_us(request):
     if request.method == "POST": 
         contact = Contact()

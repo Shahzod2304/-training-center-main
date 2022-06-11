@@ -13,10 +13,10 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
 
-  <title>Bostorek</title>
+  <title>Contact</title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'  %}"/>
   <!-- font awesome style -->
   <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
 
@@ -34,7 +34,7 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
             <span>
               Bostorek
               <br>
@@ -55,10 +55,10 @@
                 <a class="nav-link pl-lg-0" href="{% url 'home' %}">Home </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'about'%}"> About</a>
+                <a class="nav-link" href="{% url 'about'%}"> Biz haqimizda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'categories'%}">Categories</a>
+                <a class="nav-link" href="{% url 'categories'%}">Fanlar</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'blog'%}"> Blog </a>
@@ -67,12 +67,7 @@
                 <a class="nav-link" href="{% url 'contact'%}">Contact Us <span class="sr-only">(current)</span> </a>
               </li>
             </ul>
-            <from class="search_form">
-              <input type="text" class="form-control" placeholder="Search here...">
-              <button class="" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </from>
+            
           </div>
         </nav>
       </div>
@@ -90,6 +85,8 @@
             <h2 class="">
               Contact Us
             </h2>
+            <h3>Yordam kerakmi?</h3>
+            <p>Ko'rsatilgan formani to'ldiring, biz sizga qoʻngʻiroq qilamiz va birorta ham savolingiz javobsiz qolmasligiga harakat qilamiz.</p>
           </div>
           <form action="{% url 'contact' %}" method="POST">
             {% csrf_token %}
@@ -100,7 +97,7 @@
               <input name="email" type="email" placeholder="Email" required/>
             </div>
             <div>
-              <input name="phone_number" type="text" placeholder="Pone Number" required/>
+              <input name="phone_number" type="text" placeholder="Phone Number" required/>
             </div>
             <div>
               <input name="text" type="text" class="message-box" placeholder="Message" required/>
