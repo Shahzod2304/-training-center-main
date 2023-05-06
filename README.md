@@ -1,3 +1,3 @@
 O'quv markaz uchun project 
 
-https://trainingcenter23.herokuapp.com/
+https://web-production-bdb0.up.railway.app
